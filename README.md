@@ -1,9 +1,3 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: 0.0.0.0:9090
 proxies:
   - {"type":"ss","name":"🇭🇰中继香港011【请勿用来看视频】","server":"183.240.228.175","port":50200,"cipher":"chacha20-ietf-poly1305","password":"75e09741-13c8-494b-901a-3701d4cfb225"}
   - {"type":"ss","name":"🇭🇰中继香港021【请勿用来看视频】","server":"120.241.29.116","port":50201,"cipher":"chacha20-ietf-poly1305","password":"75e09741-13c8-494b-901a-3701d4cfb225"}
