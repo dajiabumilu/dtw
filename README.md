@@ -1,3 +1,8 @@
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
 proxies:
   - {"type":"ss","name":"🌀其他25-SE|⬇️8.4MB/s|0%|Netflix|Disney|Youtube|Openai","server":"sto2.a.edgeservers.org","port":39649,"cipher":"chacha20-ietf-poly1305","password":"zCbrIk12Qlg9YcERdnzjoh"}
   - {"type":"vless","name":"🇨🇭瑞士2|⬇️7.3MB/s|28%|Netflix|Disney|Openai","server":"yapc-1.afshin.ir","port":443,"uuid":"7c317161-5cf8-4cbc-811a-d1297c41bb23","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision","servername":"YAPC-1.afshin.ir","tls":true,"udp":true}
