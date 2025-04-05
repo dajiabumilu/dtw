@@ -1,9 +1,50 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
 log-level: info
-external-controller: :9090
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
 proxies:
   - {name: 🇭🇰 中继香港011【请勿用来看视频】, server: 183.240.228.175, port: 50200, type: ss, cipher: chacha20-ietf-poly1305, password: 75e09741-13c8-494b-901a-3701d4cfb225}
   - {name: 🇭🇰 中继香港021【请勿用来看视频】, server: 120.241.29.116, port: 50201, type: ss, cipher: chacha20-ietf-poly1305, password: 75e09741-13c8-494b-901a-3701d4cfb225}
